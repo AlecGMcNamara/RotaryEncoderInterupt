@@ -6,8 +6,8 @@
   Gnd      Gnd
   D2       CLK
   D3       DT
-  Tested on any D0,D1 and D6,D7 
-  All GPIO can ber used except D16  */
+  Tested on D0,D1 and D6,D7 
+  All GPIO can be used except D16  */
 
 #define CLK D2
 #define DT D3
