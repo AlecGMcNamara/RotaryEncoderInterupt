@@ -6,8 +6,8 @@
   Gnd      Gnd
   D2       CLK
   D3       DT
-  Works on any GPIO except D16
-*/
+  Tested on any D0,D1 and D6,D7 
+  All GPIO can ber used except D16  */
 
 #define CLK D2
 #define DT D3
@@ -20,13 +20,9 @@ void ICACHE_RAM_ATTR myISR()
 {
   cli(); //disable interupts
   if (!digitalRead(DT))
-  {
     intCount = intCount + (intCount < MAX_COUNT);
-  }
   else
-  {
     intCount = intCount - (intCount > MIN_COUNT);
-  }
   Serial.print(intCount);
   Serial.print(":");
   sei(); //enable interupts
@@ -43,5 +39,4 @@ void setup()
 
 void loop()
 {
-  
 }
