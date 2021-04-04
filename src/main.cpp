@@ -32,6 +32,7 @@ void setup()
 {
   Serial.begin(115200);
   Serial.println();
+  Serial.println("Starting, count limited 0-20");
   pinMode(CLK, INPUT);
   pinMode(DT, INPUT);
   attachInterrupt(digitalPinToInterrupt(CLK), myISR, RISING);
